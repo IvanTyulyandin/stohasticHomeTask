@@ -28,3 +28,9 @@ All pictures are in folder results.
 	<img src="https://github.com/IvanTyulyandin/stohasticHomeTask/blob/master/kmeans/results/peppers_4_clusters.jpg" alt = "4 clusters">
 	<img src="https://github.com/IvanTyulyandin/stohasticHomeTask/blob/master/kmeans/results/peppers_8_clusters.jpg" alt = "8 clusters">
 </p>
+
+### Validation
+<p align="center">
+	<img src="https://github.com/IvanTyulyandin/stohasticHomeTask/blob/master/kmeans/results/4_cluster_policemen_out.jpg" alt = "4 clusters">
+	<img src="https://github.com/IvanTyulyandin/stohasticHomeTask/blob/master/kmeans/results/metrics.png" alt = "Metrics evaluation">
+</p>
