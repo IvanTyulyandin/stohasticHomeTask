@@ -50,7 +50,7 @@ iteration_number = 200
 best_cluster_number = (best_calinski_harabaz_cluster_number + best_davies_bouldin_cluster_number) // 2
 centers, closest_clusters = kmeansAndMetrics.kmeans(X, best_cluster_number, iteration_number)
 
-new_X = np.vstack([centers[i] for i in closest_clusters])
+new_X = np.vstack([centers[i] for i in closest_clusters]).astype(np.uint8)
 new_image = new_X.reshape(image.shape)
 output_image_file = str(best_cluster_number) + '_cluster_policemen_out.jpg'
 Image.fromarray(new_image).save(output_image_file)

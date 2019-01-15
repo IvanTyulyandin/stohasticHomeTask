@@ -30,7 +30,7 @@ def kmeans(data, num_of_clusters, max_iter, attempts=3):
             cur_iter += 1
             cur_functional = np.linalg.norm(centers - prev_centers)
 
-        attempt_results.append((cur_functional, np.asarray(centers, dtype=np.uint8), closest_clusters))
+        attempt_results.append((cur_functional, np.asarray(centers, dtype=np.uint16), closest_clusters))
 
     best_answer = (10_000, [], [])
     for attempt in attempt_results:
@@ -71,6 +71,7 @@ def calinski_harabaz_index(data, centers, closest_clusters, num_of_clusters):
     mean = np.mean(data, axis=0)
     between_disp = np.sum([len(data[closest_clusters == i]) * ((centers[i] - mean) ** 2)
                            for i in range(num_of_clusters)])
+
     return between_disp / within_disp * (data_size - num_of_clusters) / (num_of_clusters - 1)
 
 
